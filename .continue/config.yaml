@@ -1,0 +1,54 @@
+name: Kevin
+version: 1.0.0
+schema: v1
+models:
+  - uses: relace/instant-apply
+    with:
+      RELACE_API_KEY: ${{ secrets.RELACE_API_KEY }}
+  - uses: anthropic/claude-3-7-sonnet
+    with:
+      ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+    override:
+      roles:
+        - chat
+        - edit
+  - uses: anthropic/claude-3-5-haiku
+    with:
+      ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+    override:
+      roles:
+        - apply
+        - summarize
+        - chat
+  - uses: mistral/codestral
+    with:
+      MISTRAL_API_KEY: ${{ secrets.MISTRAL_API_KEY }}
+    override:
+      roles:
+        - autocomplete
+  - uses: voyageai/rerank-2
+    with:
+      VOYAGE_API_KEY: ${{ secrets.VOYAGE_API_KEY }}
+    override:
+      roles:
+        - rerank
+  - uses: voyageai/voyage-code-3
+    with:
+      VOYAGE_API_KEY: ${{ secrets.VOYAGE_API_KEY }}
+    override:
+      roles:
+        - embed
+context:
+  - uses: continuedev/code-context
+  - uses: continuedev/docs-context
+  - uses: continuedev/diff-context
+  - uses: continuedev/terminal-context
+  - uses: continuedev/problems-context
+  - uses: continuedev/folder-context
+  - uses: continuedev/codebase-context
+docs:
+  - uses: starter/python-docs
+prompts:
+  - uses: starter/test-prompt
+rules:
+  - uses: starter/python-rules

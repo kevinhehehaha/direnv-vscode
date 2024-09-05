@@ -1,25 +1,80 @@
 {
-	"files.exclude": {
-		"out": false, // set this to true to hide the "out" folder with the compiled JS files
-		"dist": false, // set this to true to hide the "dist" folder with the compiled JS files
-		".direnv": true,
-		".vscode-test": true,
-	},
-	"search.exclude": {
-		"out": true, // set this to false to include "out" folder in search results
-		"dist": true, // set this to false to include "dist" folder in search results
-	},
-	"editor.formatOnSave": true,
-	// Turn off tsc task auto detection since we have the necessary tasks as npm scripts
-	"typescript.tsc.autoDetect": "off",
-	"yaml.schemas": {
-		// these are github workflows
-		"https://json.schemastore.org/github-workflow.json": "/.github/workflows/*.yaml",
-	},
-	"[javascript][typescript][yaml]": {
-		"editor.defaultFormatter": "esbenp.prettier-vscode",
-	},
-	"[json][jsonc]": {
-		"editor.defaultFormatter": "vscode.json-language-features",
-	},
+  "files.exclude": {
+    "out": false,
+    "dist": false,
+    ".direnv": true,
+    ".vscode-test": true
+  },
+  "search.exclude": {
+    "out": true,
+    "dist": true
+  },
+  "editor.formatOnSave": true,
+  "typescript.tsc.autoDetect": "off",
+  "yaml.schemas": {
+    "https://json.schemastore.org/github-workflow.json": "/.github/workflows/*.yaml"
+  },
+  "[javascript][typescript][yaml]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[json][jsonc]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  },
+  "C_Cpp_Runner.cCompilerPath": "gcc",
+  "C_Cpp_Runner.cppCompilerPath": "g++",
+  "C_Cpp_Runner.debuggerPath": "gdb",
+  "C_Cpp_Runner.cStandard": "",
+  "C_Cpp_Runner.cppStandard": "",
+  "C_Cpp_Runner.msvcBatchPath": "C:/Program Files/Microsoft Visual Studio/VR_NR/Community/VC/Auxiliary/Build/vcvarsall.bat",
+  "C_Cpp_Runner.useMsvc": false,
+  "C_Cpp_Runner.warnings": [
+    "-Wall",
+    "-Wextra",
+    "-Wpedantic",
+    "-Wshadow",
+    "-Wformat=2",
+    "-Wcast-align",
+    "-Wconversion",
+    "-Wsign-conversion",
+    "-Wnull-dereference"
+  ],
+  "C_Cpp_Runner.msvcWarnings": [
+    "/W4",
+    "/permissive-",
+    "/w14242",
+    "/w14287",
+    "/w14296",
+    "/w14311",
+    "/w14826",
+    "/w44062",
+    "/w44242",
+    "/w14905",
+    "/w14906",
+    "/w14263",
+    "/w44265",
+    "/w14928"
+  ],
+  "C_Cpp_Runner.enableWarnings": true,
+  "C_Cpp_Runner.warningsAsError": false,
+  "C_Cpp_Runner.compilerArgs": [],
+  "C_Cpp_Runner.linkerArgs": [],
+  "C_Cpp_Runner.includePaths": [],
+  "C_Cpp_Runner.includeSearch": [
+    "*",
+    "**/*"
+  ],
+  "C_Cpp_Runner.excludeSearch": [
+    "**/build",
+    "**/build/**",
+    "**/.*",
+    "**/.*/**",
+    "**/.vscode",
+    "**/.vscode/**"
+  ],
+  "C_Cpp_Runner.useAddressSanitizer": false,
+  "C_Cpp_Runner.useUndefinedSanitizer": false,
+  "C_Cpp_Runner.useLeakSanitizer": false,
+  "C_Cpp_Runner.showCompilationTime": false,
+  "C_Cpp_Runner.useLinkTimeOptimization": false,
+  "C_Cpp_Runner.msvcSecureNoWarnings": false
 }

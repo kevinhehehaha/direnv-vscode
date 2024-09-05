@@ -7,3 +7,5 @@ result
 .direnv/
 .vscode-test/
 *.vsix
+
+.fake

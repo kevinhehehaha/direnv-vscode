@@ -1,39 +1,58 @@
 {
-	"version": "0.2.0",
-	"configurations": [
-		{
-			"name": "Run Extension",
-			"type": "extensionHost",
-			"request": "launch",
-			"args": [
-				"--extensionDevelopmentPath=${workspaceFolder}"
-			],
-			"env": {
-				"PREDEFINED": "value",
-			},
-			"outFiles": [
-				"${workspaceFolder}/dist/**/*.js"
-			],
-			"preLaunchTask": "${defaultBuildTask}"
-		},
-		{
-			"name": "Test Extension",
-			"type": "extensionHost",
-			"request": "launch",
-			"args": [
-				"--disable-extensions",
-				"--extensionDevelopmentPath=${workspaceFolder}",
-				"--extensionTestsPath=${workspaceFolder}/out/test/suite/index",
-				"${workspaceFolder}/test/workspace",
-			],
-			"env": {
-				"PREDEFINED": "value",
-			},
-			"outFiles": [
-				"${workspaceFolder}/out/test/**/*.js",
-				"${workspaceFolder}/dist/**/*.js"
-			],
-			"preLaunchTask": "tasks: watch all",
-		}
-	]
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Run Extension",
+      "type": "extensionHost",
+      "request": "launch",
+      "args": [
+        "--extensionDevelopmentPath=${workspaceFolder}"
+      ],
+      "env": {
+        "PREDEFINED": "value"
+      },
+      "outFiles": [
+        "${workspaceFolder}/dist/**/*.js"
+      ],
+      "preLaunchTask": "${defaultBuildTask}"
+    },
+    {
+      "name": "Test Extension",
+      "type": "extensionHost",
+      "request": "launch",
+      "args": [
+        "--disable-extensions",
+        "--extensionDevelopmentPath=${workspaceFolder}",
+        "--extensionTestsPath=${workspaceFolder}/out/test/suite/index",
+        "${workspaceFolder}/test/workspace"
+      ],
+      "env": {
+        "PREDEFINED": "value"
+      },
+      "outFiles": [
+        "${workspaceFolder}/out/test/**/*.js",
+        "${workspaceFolder}/dist/**/*.js"
+      ],
+      "preLaunchTask": "tasks: watch all"
+    },
+    {
+      "name": "C/C++ Runner: Debug Session",
+      "type": "cppdbg",
+      "request": "launch",
+      "args": [],
+      "stopAtEntry": false,
+      "externalConsole": true,
+      "cwd": "c:/Users/ivann/OneDrive/文件/GitHub/direnv-vscode/src/test/suite/commands",
+      "program": "c:/Users/ivann/OneDrive/文件/GitHub/direnv-vscode/src/test/suite/commands/build/Debug/outDebug",
+      "MIMode": "gdb",
+      "miDebuggerPath": "gdb",
+      "setupCommands": [
+        {
+          "description": "Enable pretty-printing for gdb",
+          "text": "-enable-pretty-printing",
+          "ignoreFailures": true
+        }
+      ]
+    }
+  ]
 }
