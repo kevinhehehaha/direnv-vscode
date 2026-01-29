@@ -70,6 +70,58 @@ Clicking the status item will also reload the custom environment.
 This extension requires [direnv] to be installed.
 We also recommend hooking direnv into your shell.
 
+### Shell Setup
+
+Add direnv to your shell configuration to automatically load and unload environment variables:
+
+#### Bash
+
+Add the following to your `~/.bashrc`:
+
+```bash
+eval "$(direnv hook bash)"
+```
+
+#### Zsh
+
+Add the following to your `~/.zshrc`:
+
+```bash
+eval "$(direnv hook zsh)"
+```
+
+Or, if using [oh-my-zsh], add `direnv` to your plugins list in `~/.zshrc`:
+
+```bash
+plugins=(... direnv)
+```
+
+[oh-my-zsh]: https://ohmyz.sh/
+
+#### Fish
+
+Add the following to your `~/.config/fish/config.fish`:
+
+```fish
+direnv hook fish | source
+```
+
+You can optionally configure how direnv responds to directory changes:
+
+```fish
+set -g direnv_fish_mode eval_on_arrow    # trigger direnv at prompt, and on every arrow-based directory change (default)
+set -g direnv_fish_mode eval_after_arrow # trigger direnv at prompt, and only after arrow-based directory changes before executing command
+set -g direnv_fish_mode disable_arrow    # trigger direnv at prompt only, this is similar functionality to the original behavior
+```
+
+#### Tcsh
+
+Add the following to your `~/.tcshrc`:
+
+```tcsh
+eval `direnv hook tcsh`
+```
+
 
 ## Known Issues
 
