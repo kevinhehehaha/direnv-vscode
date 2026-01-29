@@ -112,12 +112,35 @@ set -g direnv_fish_mode eval_after_arrow # trigger direnv at prompt, and only af
 set -g direnv_fish_mode disable_arrow    # trigger direnv at prompt only, this is similar functionality to the original behavior
 ```
 
+#### Nushell
+
+Add the following to your `~/.config/nushell/config.nu`:
+
+```nu
+{ ||
+  if (which direnv | is-empty) {
+    return
+  }
+
+  direnv export json | from json | default {} | load-env
+}
+```
+
+
 #### Tcsh
 
 Add the following to your `~/.tcshrc`:
 
 ```tcsh
 eval `direnv hook tcsh`
+```
+
+#### Murex
+
+Add the following to your Murex configuration (for example `~/.murexrc`):
+
+```murex
+direnv hook murex | source
 ```
 
 ## Known Issues
