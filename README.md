@@ -122,6 +122,21 @@ Add the following to your `~/.tcshrc`:
 eval `direnv hook tcsh`
 ```
 
+#### Elvish
+
+Create the direnv hook in Elvish's library directory and source it:
+
+```sh
+mkdir -p ~/.config/elvish/lib
+direnv hook elvish > ~/.config/elvish/lib/direnv.elv
+```
+
+Then add the following to your `~/.config/elvish/rc.elv`:
+
+```elvish
+use direnv
+```
+
 
 ## Known Issues
 
