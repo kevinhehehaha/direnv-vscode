@@ -126,7 +126,6 @@ Add the following to your `~/.config/nushell/config.nu`:
 }
 ```
 
-
 #### Tcsh
 
 Add the following to your `~/.tcshrc`:
