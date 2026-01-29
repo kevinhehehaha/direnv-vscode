@@ -10,7 +10,6 @@ by loading environment variables for the workspace root.
 
 [direnv]: https://direnv.net/
 
-
 ## Features
 
 ### Custom Environment
@@ -35,27 +34,27 @@ since direnv executes arbitrary shell script.**
 
 ### Commands
 
-*	"direnv: Open .envrc file"
-	opens an editor with the .envrc file for the workspace,
-	which means in the workspace root or any of its parent directories.
+* "direnv: Open .envrc file"
+  opens an editor with the .envrc file for the workspace,
+  which means in the workspace root or any of its parent directories.
 
-*	"direnv: Create .envrc file"
-	opens an editor with the .envrc file at the workspace root.
+* "direnv: Create .envrc file"
+  opens an editor with the .envrc file at the workspace root.
 
-*	"direnv: Allow this .envrc file"
-	allows loading a custom environment from the currently opened shell script.
+* "direnv: Allow this .envrc file"
+  allows loading a custom environment from the currently opened shell script.
 
-*	"direnv: Block this .envrc file"
-	blocks loading a custom environment from the currently opened shell script.
+* "direnv: Block this .envrc file"
+  blocks loading a custom environment from the currently opened shell script.
 
-*	"direnv: Reload environment"
-	reloads the custom environment for the workspace.
+* "direnv: Reload environment"
+  reloads the custom environment for the workspace.
 
-*	"direnv: Reset and reload environment"
-	resets the custom environment for the workspace, then reloads it.
+* "direnv: Reset and reload environment"
+  resets the custom environment for the workspace, then reloads it.
 
-*	"direnv: Load .envrc file"
-	loads a custom environment from the specified .envrc file
+* "direnv: Load .envrc file"
+  loads a custom environment from the specified .envrc file
 
 ### Status Item
 
@@ -63,7 +62,6 @@ The extension displays a status icon
 that indicates whether it is currently working or has succeeded or failed.
 
 Clicking the status item will also reload the custom environment.
-
 
 ## Requirements
 
@@ -122,7 +120,6 @@ Add the following to your `~/.tcshrc`:
 eval `direnv hook tcsh`
 ```
 
-
 ## Known Issues
 
 Custom tasks with type `process` don't pick up on the modified environment.
@@ -139,7 +136,6 @@ but some programs insist on treating them distinctly.
 
 direnv executes arbitrary shell scripts
 so this extension requires trusted workspaces.
-
 
 ## Acknowledgements
 
